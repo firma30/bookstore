@@ -140,7 +140,7 @@
                 <div class="col-md-4">
                     <div class="book-card">
                         <a href="book-detail.html?id=quiet-mind" class="book-thumb">
-                            <img src="https://placehold.co/500x625/173c34/f5f1e8?font=playfair-display&text=The+Quiet+Mind" alt="The Quiet Mind">
+                            <img src="" alt="The Quiet Mind">
                         </a>
                         <div class="book-content">
                             <a href="book-detail.html?id=quiet-mind" class="book-title-link">
@@ -161,7 +161,7 @@
                 <div class="col-md-4">
                     <div class="book-card">
                         <a href="book-detail.html?id=beyond-knowledge" class="book-thumb">
-                            <img src="https://placehold.co/500x625/173c34/f5f1e8?font=playfair-display&text=Beyond+Knowledge" alt="Beyond Knowledge">
+                            <img src="" alt="Beyond Knowledge">
                         </a>
                         <div class="book-content">
                             <a href="book-detail.html?id=beyond-knowledge" class="book-title-link">
@@ -182,7 +182,7 @@
                 <div class="col-md-4">
                     <div class="book-card">
                         <a href="book-detail.html?id=art-of-reading" class="book-thumb">
-                            <img src="https://placehold.co/500x625/173c34/f5f1e8?font=playfair-display&text=The+Art+Of+Reading" alt="The Art Of Reading">
+                            <img src="" alt="The Art Of Reading">
                         </a>
                         <div class="book-content">
                             <a href="book-detail.html?id=art-of-reading" class="book-title-link">
@@ -276,7 +276,18 @@
     </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            ["quiet-mind", "beyond-knowledge", "art-of-reading"].forEach((id) => {
+                const book = booksData.find((item) => item.id === id);
+                const card = document.querySelector(`a[href="book-detail.html?id=${id}"]`);
+                const image = card?.querySelector("img");
+                if (book && image) { image.src = getBookCover(book); }
+            });
+        });
+    </script>
 </body>
 
 </html>

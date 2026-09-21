@@ -799,3 +799,35 @@
         padding-top: 140px;
     }
 }
+
+
+/* =========================
+   BOOK METADATA
+   ========================= */
+.book-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0 16px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(23, 60, 52, 0.08);
+    font-size: 11px;
+    color: var(--muted);
+}
+.book-meta span:first-child { color: var(--gold); font-weight: 600; }
+.detail-book-meta {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin: 24px 0 30px;
+}
+.detail-book-meta > div {
+    padding: 14px 12px;
+    border: 1px solid rgba(23, 60, 52, 0.08);
+    border-radius: 12px;
+    background: rgba(255,255,255,.55);
+}
+.detail-book-meta small { display:block; margin-bottom:5px; font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--muted); }
+.detail-book-meta strong { font-size:14px; color:var(--green); }
+@media (max-width: 575px) { .detail-book-meta { grid-template-columns: repeat(2, minmax(0,1fr)); } }

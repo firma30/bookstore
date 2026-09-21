@@ -51,7 +51,7 @@
         <div class="book-card">
           <a href="book-detail.html?id=${book.id}" class="book-thumb">
             ${tagMarkup}
-            <img src="${book.cover}" alt="${book.title}" loading="lazy">
+            <img src="${getBookCover(book)}" alt="${book.title}" loading="lazy">
           </a>
           <div class="book-content">
             <span class="book-category-label">${book.category}</span>
@@ -59,6 +59,7 @@
               <h3>${book.title}</h3>
             </a>
             <p>${book.author}</p>
+            <div class="book-meta"><span>★ ${book.rating}</span><span>${formatRupiah(book.price)}</span></div>
             <div class="book-actions">
               <a href="book-detail.html?id=${book.id}" class="detail-link">Lihat Detail</a>
               <a href="#" onclick="orderBook('${book.title.replace(/'/g, "\\'")}'); return false;">Pesan via WhatsApp</a>

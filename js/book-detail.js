@@ -34,12 +34,21 @@
 
   pageTitle.textContent = `${book.title} | L'Éditeur`;
   breadcrumbTitle.textContent = book.title;
-  detailCover.src = book.cover;
+  detailCover.src = getBookCover(book);
   detailCover.alt = book.title;
   detailCategory.textContent = book.category;
   detailTitle.textContent = book.title;
   detailAuthor.textContent = book.author;
   detailSynopsis.textContent = book.synopsis;
+
+  const detailPrice = document.getElementById("detailPrice");
+  const detailRating = document.getElementById("detailRating");
+  const detailPages = document.getElementById("detailPages");
+  const detailYear = document.getElementById("detailYear");
+  if (detailPrice) detailPrice.textContent = formatRupiah(book.price);
+  if (detailRating) detailRating.textContent = `${book.rating} / 5`;
+  if (detailPages) detailPages.textContent = `${book.pages} halaman`;
+  if (detailYear) detailYear.textContent = book.publishedYear;
 
   if (book.tag) {
     tagEl.textContent = book.tag;
@@ -76,7 +85,7 @@
           <div class="book-card">
             <a href="book-detail.html?id=${item.id}" class="book-thumb">
               ${tagMarkup}
-              <img src="${item.cover}" alt="${item.title}" loading="lazy">
+              <img src="${getBookCover(item)}" alt="${item.title}" loading="lazy">
             </a>
             <div class="book-content">
               <span class="book-category-label">${item.category}</span>
