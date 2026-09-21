@@ -815,19 +815,471 @@
     font-size: 11px;
     color: var(--muted);
 }
-.book-meta span:first-child { color: var(--gold); font-weight: 600; }
+
+.book-meta span:first-child {
+    color: var(--gold);
+    font-weight: 600;
+}
+
 .detail-book-meta {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 10px;
     margin: 24px 0 30px;
 }
-.detail-book-meta > div {
+
+.detail-book-meta>div {
     padding: 14px 12px;
     border: 1px solid rgba(23, 60, 52, 0.08);
     border-radius: 12px;
-    background: rgba(255,255,255,.55);
+    background: rgba(255, 255, 255, .55);
 }
-.detail-book-meta small { display:block; margin-bottom:5px; font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--muted); }
-.detail-book-meta strong { font-size:14px; color:var(--green); }
-@media (max-width: 575px) { .detail-book-meta { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+
+.detail-book-meta small {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+}
+
+.detail-book-meta strong {
+    font-size: 14px;
+    color: var(--green);
+}
+
+@media (max-width: 575px) {
+    .detail-book-meta {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   OPEN LIBRARY API
+   ========================================================= */
+
+
+.api-library-section {
+
+    padding: 80px 0;
+
+    margin-top: 40px;
+
+}
+
+
+.api-library-header {
+
+    margin-bottom: 30px;
+
+}
+
+
+.api-library-header .subtitle {
+
+    margin-bottom: 10px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+}
+
+
+.api-library-header h2 {
+
+    margin-bottom: 10px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+}
+
+
+.api-library-header p:last-child {
+
+    max-width: 650px;
+
+    color: #666;
+
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+
+.api-search-box {
+
+    display: flex;
+
+    gap: 12px;
+
+    max-width: 800px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.api-search-box input {
+
+    flex: 1;
+
+    padding: 16px 22px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 30px;
+
+    outline: none;
+
+    background: #fff;
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 15px;
+
+}
+
+
+.api-search-box input:focus {
+
+    border-color: #123f35;
+
+}
+
+
+.api-search-box button {
+
+    min-width: 120px;
+
+    padding: 16px 28px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #123f35;
+
+    color: #fff;
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    cursor: pointer;
+
+}
+
+
+.api-search-box button:hover {
+
+    opacity: 0.9;
+
+}
+
+
+.api-search-box button:disabled {
+
+    opacity: 0.7;
+
+    cursor: wait;
+
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+
+.api-status {
+
+    min-height: 24px;
+
+    margin-bottom: 25px;
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   BOOK GRID
+   ========================================================= */
+
+
+.api-book-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 24px;
+
+}
+
+
+/* =========================================================
+   BOOK CARD
+   ========================================================= */
+
+
+.api-book-card {
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border:
+        1px solid #e9e9e9;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.api-book-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================================================
+   COVER
+   ========================================================= */
+
+
+.api-book-cover {
+
+    width: 100%;
+
+    height: 320px;
+
+    background: #f3f3f3;
+
+    overflow: hidden;
+
+}
+
+
+.api-book-cover img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================================
+   NO COVER
+   ========================================================= */
+
+
+.api-no-cover {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background:
+        linear-gradient(135deg,
+            #eeeeee,
+            #dddddd);
+
+    color: #777;
+
+}
+
+
+.api-no-cover i {
+
+    font-size: 42px;
+
+}
+
+
+.api-no-cover span {
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   BOOK INFO
+   ========================================================= */
+
+
+.api-book-info {
+
+    padding: 18px;
+
+}
+
+
+.api-book-info h3 {
+
+    margin: 0 0 10px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+}
+
+
+.api-book-author {
+
+    margin: 0 0 8px;
+
+    color: #555;
+
+    font-size: 14px;
+
+}
+
+
+.api-book-year {
+
+    margin: 0;
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+
+@media (max-width: 1200px) {
+
+    .api-book-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 992px) {
+
+    .api-book-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .api-library-section {
+
+        padding: 60px 0;
+
+    }
+
+
+    .api-library-header h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .api-search-box {
+
+        flex-direction: column;
+
+    }
+
+
+    .api-search-box button {
+
+        width: 100%;
+
+    }
+
+
+    .api-book-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .api-book-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .api-book-cover {
+
+        height: 360px;
+
+    }
+
+}
