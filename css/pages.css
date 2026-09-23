@@ -1283,3 +1283,306 @@
     }
 
 }
+
+
+/* =========================================================
+   DARK MODE — INNER PAGES
+   ========================================================= */
+
+
+/* Page header */
+
+body.dark-mode .page-header {
+    background: var(--ivory-light);
+}
+
+body.dark-mode .page-header h1 {
+    color: var(--green);
+}
+
+body.dark-mode .page-desc {
+    color: var(--muted);
+}
+
+
+/* Breadcrumb */
+
+body.dark-mode .breadcrumb-custom {
+    color: var(--muted);
+}
+
+body.dark-mode .breadcrumb-custom a {
+    color: var(--green);
+}
+
+
+/* Toolbar */
+
+body.dark-mode .catalog-toolbar {
+    background: var(--ivory-light);
+}
+
+body.dark-mode .toolbar-panel {
+    background: var(--white);
+    border-color: rgba(213, 228, 221, 0.10);
+}
+
+
+/* Filter */
+
+body.dark-mode .filter-btn,
+body.dark-mode .filter-pill {
+    background: var(--ivory-light);
+    border-color: rgba(213, 228, 221, 0.12);
+    color: var(--text);
+}
+
+body.dark-mode .filter-btn:hover,
+body.dark-mode .filter-btn.active,
+body.dark-mode .filter-pill:hover,
+body.dark-mode .filter-pill.active {
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--white);
+}
+
+
+/* Search */
+
+body.dark-mode .search-box,
+body.dark-mode .search-input,
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: var(--white);
+    color: var(--text);
+    border-color: rgba(213, 228, 221, 0.15);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: var(--muted);
+}
+
+
+/* Book cards */
+
+body.dark-mode .book-card {
+    background: var(--white);
+    border-color: rgba(213, 228, 221, 0.10);
+}
+
+body.dark-mode .book-card h3,
+body.dark-mode .book-card h4 {
+    color: var(--charcoal);
+}
+
+body.dark-mode .book-card p {
+    color: var(--muted);
+}
+
+
+/* Book cover */
+
+body.dark-mode .book-cover {
+    background: var(--cream);
+}
+
+
+/* Book tags */
+
+body.dark-mode .book-tag {
+    background: var(--green-soft);
+    color: var(--green);
+}
+
+
+/* Result count */
+
+body.dark-mode .results-count {
+    color: var(--muted);
+}
+
+
+/* Detail page */
+
+body.dark-mode .detail-section,
+body.dark-mode .related-section {
+    background: var(--ivory-light);
+}
+
+body.dark-mode .detail-title {
+    color: var(--green);
+}
+
+body.dark-mode .detail-author {
+    color: var(--muted);
+}
+
+body.dark-mode .detail-book-meta > div {
+    background: var(--white);
+    border-color: rgba(213, 228, 221, 0.10);
+}
+
+body.dark-mode .detail-book-meta strong {
+    color: var(--green);
+}
+
+body.dark-mode .detail-block h2 {
+    color: var(--charcoal);
+}
+
+body.dark-mode .detail-block p {
+    color: var(--muted);
+}
+
+body.dark-mode .detail-divider {
+    background: rgba(213, 228, 221, 0.10);
+}
+
+
+/* Highlight list */
+
+body.dark-mode .highlight-list li {
+    color: var(--text);
+}
+
+
+/* Not found */
+
+body.dark-mode .not-found-state {
+    background: var(--ivory-light);
+}
+
+body.dark-mode .not-found-state h1 {
+    color: var(--green);
+}
+
+body.dark-mode .not-found-state p {
+    color: var(--muted);
+}
+
+
+/* Articles */
+
+body.dark-mode .article-card,
+body.dark-mode .article-card-light {
+    background: var(--white);
+    border-color: rgba(213, 228, 221, 0.10);
+}
+
+body.dark-mode .article-card h3,
+body.dark-mode .article-card-light h3 {
+    color: var(--charcoal);
+}
+
+body.dark-mode .article-card p,
+body.dark-mode .article-card-light p {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   OPEN LIBRARY DARK MODE
+   ========================================================= */
+
+body.dark-mode .api-library-section {
+    background: var(--ivory-light);
+}
+
+body.dark-mode .api-library-header h2 {
+    color: var(--green);
+}
+
+body.dark-mode .api-library-header p,
+body.dark-mode .api-library-header p:last-child {
+    color: var(--muted);
+}
+
+
+/* Search */
+
+body.dark-mode .api-search-box input {
+    background: var(--white);
+    color: var(--text);
+    border-color: rgba(213, 228, 221, 0.15);
+}
+
+body.dark-mode .api-search-box input::placeholder {
+    color: var(--muted);
+}
+
+body.dark-mode .api-search-box input:focus {
+    border-color: var(--green);
+}
+
+
+/* Status */
+
+body.dark-mode .api-status {
+    color: var(--muted);
+}
+
+
+/* API Cards */
+
+body.dark-mode .api-book-card {
+    background: var(--white);
+    border-color: rgba(213, 228, 221, 0.10);
+}
+
+body.dark-mode .api-book-cover {
+    background: var(--cream);
+}
+
+body.dark-mode .api-book-info h3 {
+    color: var(--charcoal);
+}
+
+body.dark-mode .api-book-author {
+    color: var(--muted);
+}
+
+body.dark-mode .api-book-year {
+    color: var(--muted);
+}
+
+
+/* No cover */
+
+body.dark-mode .api-no-cover {
+    background:
+        linear-gradient(
+            135deg,
+            #292e2b,
+            #1f2421
+        );
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+body.dark-mode footer {
+    background: #0c0f0d;
+    color: var(--muted);
+}
+
+body.dark-mode footer h3 {
+    color: var(--green);
+}
+
+body.dark-mode footer p {
+    color: var(--muted);
+}
+
+body.dark-mode footer a {
+    color: var(--text);
+}
+
+body.dark-mode footer a:hover {
+    color: var(--green);
+}

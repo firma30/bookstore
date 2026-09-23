@@ -33,6 +33,16 @@
 
 <body>
 
+    <script>
+        (function () {
+            const theme = localStorage.getItem("theme");
+
+            if (theme === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+        })();
+    </script>
+
 
     <!-- ================= NAVBAR ================= -->
 
@@ -104,6 +114,11 @@
                     Pesan Buku
 
                 </a>
+
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Aktifkan Dark Mode"
+                    title="Dark Mode">
+                    <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                </button>
 
             </div>
 
