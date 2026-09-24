@@ -1,7 +1,4 @@
-/* =====================================================
-   L'ÉDITEUR — MODERN BOOKSTORE
-   articles.js — logic untuk halaman artikel (articles.html)
-   ===================================================== */
+
 
 (function () {
   const articleGrid = document.getElementById("articleGrid");

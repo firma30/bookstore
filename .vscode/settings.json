@@ -1,0 +1,12 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python -c \"import re, pathlib; files = list\\(pathlib\\.Path\\('\\.'\\)\\.glob\\('\\*\\.html'\\)\\); \\[ \\(lambda text, path: \\(path\\.write_text\\(text, encoding='utf-8'\\), print\\(f'cleaned \\{path\\.name\\}'\\)\\)\\)\\(re\\.sub\\(r'<!--\\.\\*\\?-->', '', path\\.read_text\\(encoding='utf-8'\\), flags=re\\.S\\), path\\) for path in files \\]\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python -c \"from pathlib import Path; p=Path\\(r'c:\\\\SEMENTARA\\\\project\\\\bookstore\\\\js\\\\script\\.js'\\); print\\('/\\*' in p\\.read_text\\(encoding='utf-8'\\)\\); print\\(p\\.read_text\\(encoding='utf-8'\\)\\[:80\\]\\)\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

@@ -1,7 +1,4 @@
-/* =====================================================
-   L'ÉDITEUR — MODERN BOOKSTORE
-   book-detail.js — logic untuk halaman detail buku (book-detail.html)
-   ===================================================== */
+
 
 (function () {
   const detailContent = document.getElementById("detailContent");

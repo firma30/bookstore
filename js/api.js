@@ -1,12 +1,8 @@
-/* =========================================================
-   OPEN LIBRARY API
-   ========================================================= */
+
 
 const OPEN_LIBRARY_URL = "https://openlibrary.org/search.json";
 
-/* =========================================================
-   SEARCH BOOKS
-   ========================================================= */
+
 
 async function searchBooksFromAPI(keyword, limit = 10) {
   if (!keyword || !keyword.trim()) {
@@ -26,9 +22,7 @@ async function searchBooksFromAPI(keyword, limit = 10) {
   return data.docs || [];
 }
 
-/* =========================================================
-   DOM ELEMENTS
-   ========================================================= */
+
 
 const searchInput = document.getElementById("apiSearchInput");
 
@@ -38,42 +32,22 @@ const bookGrid = document.getElementById("apiBookGrid");
 
 const statusElement = document.getElementById("apiStatus");
 
-/* =========================================================
-   STOP JIKA HALAMAN INI TIDAK PUNYA SECTION OPEN LIBRARY
-   (mencegah error yang bisa menghentikan script lain
-   kalau api.js ikut ter-load di halaman tanpa elemen ini)
-   ========================================================= */
+
 
 if (searchInput && searchButton && bookGrid && statusElement) {
-  /* =========================================================
-   ESCAPE TEKS
-   (supaya karakter seperti < atau & dari data API
-   tidak merusak tampilan HTML)
-   ========================================================= */
+  
 
   function escapeHtml(value) {
     return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
 
-  /* =========================================================
-   SHOW STATUS
-   ========================================================= */
-
   function showStatus(message) {
     statusElement.textContent = message;
   }
 
-  /* =========================================================
-   CLEAR STATUS
-   ========================================================= */
-
   function clearStatus() {
     statusElement.textContent = "";
   }
-
-  /* =========================================================
-   CREATE BOOK CARD
-   ========================================================= */
 
   function createBookCard(book) {
     const title = escapeHtml(book.title || "Judul tidak tersedia");
@@ -148,10 +122,6 @@ if (searchInput && searchButton && bookGrid && statusElement) {
     return card;
   }
 
-  /* =========================================================
-   DISPLAY BOOKS
-   ========================================================= */
-
   function displayBooks(books) {
     bookGrid.innerHTML = "";
 
@@ -171,10 +141,6 @@ if (searchInput && searchButton && bookGrid && statusElement) {
 
     showStatus(`${books.length} buku ditemukan.`);
   }
-
-  /* =========================================================
-   SEARCH HANDLER
-   ========================================================= */
 
   async function handleSearch() {
     const keyword = searchInput.value.trim();
@@ -225,15 +191,7 @@ if (searchInput && searchButton && bookGrid && statusElement) {
     }
   }
 
-  /* =========================================================
-   BUTTON CLICK
-   ========================================================= */
-
   searchButton.addEventListener("click", handleSearch);
-
-  /* =========================================================
-   ENTER KEY
-   ========================================================= */
 
   searchInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {

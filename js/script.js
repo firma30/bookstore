@@ -1,12 +1,7 @@
-/* =====================================================
-   L'ÉDITEUR — MODERN BOOKSTORE
-   script.js
-   ===================================================== */
+
 
 (function () {
-  /* =========================
-     0. DARK MODE
-     ========================= */
+  
 
   const themeToggle = document.getElementById("themeToggle");
   const themeIcon = document.getElementById("themeIcon");
@@ -38,9 +33,7 @@
     });
   }
 
-  /* =========================
-     NAVBAR
-     ========================= */
+  
 
   const navbar = document.querySelector(".navbar");
   const navbarCollapse = document.querySelector(".navbar-collapse");
@@ -52,9 +45,7 @@
 
   const buttons = document.querySelectorAll(".btn-primary-custom, .btn-outline-custom, .btn-whatsapp");
 
-  /* =========================
-     1. NAVBAR SCROLL EFFECT
-     ========================= */
+  
 
   if (navbar) {
     const updateNavbarState = () => {
@@ -68,9 +59,7 @@
     updateNavbarState();
   }
 
-  /* =========================
-     2. SMOOTH SCROLL
-     ========================= */
+  
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (event) => {
@@ -89,9 +78,7 @@
     });
   });
 
-  /* =========================
-     3. MOBILE MENU AUTO CLOSE
-     ========================= */
+  
 
   document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
     link.addEventListener("click", () => {
@@ -101,9 +88,7 @@
     });
   });
 
-  /* =========================
-     4. SCROLL REVEAL ANIMATION
-     ========================= */
+  
 
   if ("IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver(
@@ -142,9 +127,7 @@
     observeReveal(revealElements);
   }
 
-  /* =========================
-     5. WHATSAPP BOOK ORDER
-     ========================= */
+  
 
   window.orderBook = function orderBook(bookName) {
     const phone = "628123456789";
@@ -156,9 +139,7 @@
     window.open(whatsappURL, "_blank", "noopener,noreferrer");
   };
 
-  /* =========================
-     6. IMAGE LAZY EFFECT
-     ========================= */
+  
 
   images.forEach((img) => {
     img.addEventListener("load", () => {
@@ -166,9 +147,7 @@
     });
   });
 
-  /* =========================
-     7. BUTTON HOVER MICRO EFFECT
-     ========================= */
+  
 
   buttons.forEach((button) => {
     button.addEventListener("mouseenter", () => {
@@ -180,9 +159,7 @@
     });
   });
 
-  /* =========================
-     8. CURRENT YEAR FOOTER
-     ========================= */
+  
 
   const year = document.querySelector(".current-year");
 
@@ -191,9 +168,7 @@
   }
 })();
 
-/* =========================
-   FORMAT RUPIAH
-   ========================= */
+
 
 function formatRupiah(value) {
   return new Intl.NumberFormat("id-ID", {

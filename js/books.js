@@ -1,7 +1,4 @@
-/* =====================================================
-   L'ÉDITEUR — MODERN BOOKSTORE
-   books.js — logic untuk halaman katalog (books.html)
-   ===================================================== */
+
 
 (function () {
   const bookGrid = document.getElementById("bookGrid");

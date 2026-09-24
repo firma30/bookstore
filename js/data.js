@@ -1,13 +1,6 @@
-/* =====================================================
-   L'ÉDITEUR — MODERN BOOKSTORE
-   data.js
-   Sumber data buku & artikel (dummy content).
-   Ganti "cover" / "image" dengan path asset asli saat sudah tersedia.
-   ===================================================== */
 
-/* =========================
-   KATEGORI BUKU (urutan tetap dipakai di filter)
-   ========================= */
+
+
 
 const bookCategories = [
   "Novel",
@@ -19,9 +12,7 @@ const bookCategories = [
   "Kesehatan",
 ];
 
-/* =========================
-   DATA BUKU
-   ========================= */
+
 
 const booksData = [
   {
@@ -615,9 +606,7 @@ const booksData = [
   },
 ];
 
-/* =========================
-   KATEGORI ARTIKEL
-   ========================= */
+
 
 const articleCategories = [
   "Review Buku",
@@ -627,9 +616,7 @@ const articleCategories = [
   "Berita Penerbit",
 ];
 
-/* =========================
-   DATA ARTIKEL
-   ========================= */
+
 
 const articlesData = [
   {
@@ -725,11 +712,7 @@ const articlesData = [
 ];
 
 
-/* =====================================================
-   LOCAL BOOK COVER GENERATOR
-   Semua cover dibuat sebagai SVG data URI di browser.
-   Tidak membutuhkan API gambar, CDN, atau asset eksternal.
-   ===================================================== */
+
 
 const bookCoverThemes = {
   "Novel": { bg: "#24383A", accent: "#D5B46B", ink: "#F5F1E8", motif: "circle" },
@@ -783,7 +766,7 @@ function getBookCover(book) {
     wave: `<path d="M325 120 C355 75, 385 165, 415 120 S475 75, 485 110" fill="none" stroke="${t.accent}" stroke-width="5"/><path d="M325 145 C355 100, 385 190, 415 145 S475 100, 485 135" fill="none" stroke="${t.accent}" opacity=".35" stroke-width="2"/>`
   }[t.motif];
 
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="500" height="625" viewBox="0 0 500 625">
+  const svg = `<svg xmlns="http:
     <rect width="500" height="625" fill="${t.bg}"/>
     <rect x="24" y="24" width="452" height="577" rx="4" fill="none" stroke="${t.accent}" opacity=".55"/>
     ${motif}
